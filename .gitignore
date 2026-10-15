@@ -1,0 +1,5 @@
+node_modules/
+.noah/
+graphify-out/
+.DS_Store
+evals/results/

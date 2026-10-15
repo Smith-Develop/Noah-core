@@ -1,0 +1,91 @@
+<svg viewBox="0 0 1200 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Noah Core: get the most out of Claude Code without wasting tokens">
+  <desc>Animated hero: noisy context flows into Noah Core and comes out lean, with four pillars: lean context, summary-first output, smallest complete change, short honest replies.</desc>
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+    <path id="in1" d="M 60,120 C 260,120 330,190 520,205"/>
+    <path id="in2" d="M 60,205 L 520,205"/>
+    <path id="in3" d="M 60,290 C 260,290 330,220 520,205"/>
+    <path id="out" d="M 680,205 L 1140,205"/>
+  </defs>
+
+  <rect width="1200" height="440" fill="#0b0e14"/>
+  <rect width="1200" height="440" fill="url(#grid)"/>
+  <rect width="1200" height="440" fill="url(#glow)"/>
+
+  <!-- noisy input streams -->
+  <g fill="none" stroke="#f87171" stroke-opacity="0.35" stroke-width="1.2" stroke-dasharray="3 6">
+    <use href="#in1"/><use href="#in2"/><use href="#in3"/>
+  </g>
+  <g font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#a1a1aa">
+    <text x="60" y="106">full test logs</text>
+    <text x="60" y="191">whole-file reads</text>
+    <text x="60" y="276">re-runs · narration · bloat</text>
+  </g>
+  <g fill="#f87171">
+    <circle r="3"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#in1"/></animateMotion></circle>
+    <circle r="3"><animateMotion dur="2.4s" begin="-0.4s" repeatCount="indefinite"><mpath href="#in1"/></animateMotion></circle>
+    <circle r="3"><animateMotion dur="2s" begin="-0.2s" repeatCount="indefinite"><mpath href="#in2"/></animateMotion></circle>
+    <circle r="3"><animateMotion dur="2s" begin="-0.9s" repeatCount="indefinite"><mpath href="#in2"/></animateMotion></circle>
+    <circle r="3"><animateMotion dur="2.6s" begin="-0.6s" repeatCount="indefinite"><mpath href="#in3"/></animateMotion></circle>
+    <circle r="3"><animateMotion dur="2.6s" begin="-1.3s" repeatCount="indefinite"><mpath href="#in3"/></animateMotion></circle>
+  </g>
+
+  <!-- core -->
+  <circle cx="600" cy="205" r="120" fill="url(#coreGlow)">
+    <animate attributeName="r" values="105;125;105" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <rect x="520" y="140" width="160" height="130" rx="26" fill="#161b22" stroke="url(#brand)" stroke-width="2"/>
+  <text x="600" y="200" text-anchor="middle" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="44" font-weight="800" fill="url(#brand)">N</text>
+  <text x="600" y="236" text-anchor="middle" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#F7F6FC">noah-core</text>
+  <text x="600" y="256" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#a1a1aa">~1.2k tokens</text>
+
+  <!-- lean output -->
+  <use href="#out" stroke="#2dd4bf" stroke-width="2" opacity="0.6"/>
+  <g fill="#2dd4bf">
+    <circle r="4"><animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#out"/></animateMotion></circle>
+    <circle r="4"><animateMotion dur="1.8s" begin="-0.9s" repeatCount="indefinite"><mpath href="#out"/></animateMotion></circle>
+  </g>
+  <text x="1140" y="185" text-anchor="end" font-family="Consolas, monospace" font-size="12" fill="#2dd4bf">lean context · done right</text>
+
+  <!-- title -->
+  <text x="600" y="58" text-anchor="middle" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="34" font-weight="800" fill="#F7F6FC">Noah Core</text>
+  <text x="600" y="86" text-anchor="middle" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" fill="#a1a1aa">Get the most out of Claude Code without wasting tokens</text>
+
+  <!-- pillars -->
+  <g font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="600" fill="#F7F6FC">
+    <g transform="translate(90,340)">
+      <rect width="235" height="54" rx="12" fill="#161b22" stroke="#ffffff" stroke-opacity="0.08"/>
+      <circle cx="22" cy="27" r="5" fill="#2dd4bf"><animate attributeName="opacity" values="1;0.3;1" dur="2.4s" repeatCount="indefinite"/></circle>
+      <text x="38" y="32">Lean context</text>
+    </g>
+    <g transform="translate(345,340)">
+      <rect width="235" height="54" rx="12" fill="#161b22" stroke="#ffffff" stroke-opacity="0.08"/>
+      <circle cx="22" cy="27" r="5" fill="#5eead4"><animate attributeName="opacity" values="1;0.3;1" dur="2.4s" begin="-0.6s" repeatCount="indefinite"/></circle>
+      <text x="38" y="32">Summary-first output</text>
+    </g>
+    <g transform="translate(600,340)">
+      <rect width="250" height="54" rx="12" fill="#161b22" stroke="#ffffff" stroke-opacity="0.08"/>
+      <circle cx="22" cy="27" r="5" fill="#a5b4fc"><animate attributeName="opacity" values="1;0.3;1" dur="2.4s" begin="-1.2s" repeatCount="indefinite"/></circle>
+      <text x="38" y="32">Smallest complete change</text>
+    </g>
+    <g transform="translate(870,340)">
+      <rect width="240" height="54" rx="12" fill="#161b22" stroke="#ffffff" stroke-opacity="0.08"/>
+      <circle cx="22" cy="27" r="5" fill="#818cf8"><animate attributeName="opacity" values="1;0.3;1" dur="2.4s" begin="-1.8s" repeatCount="indefinite"/></circle>
+      <text x="38" y="32">Short, honest replies</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "explain-module",
+    "prompt": "Explain in at most 10 lines how the main entry point of this project works and which files it depends on. Do not change anything."
+  },
+  {
+    "id": "fix-failing-test",
+    "prompt": "Run the test suite, find the first failing test and fix the root cause. Do not change the test unless it is wrong.",
+    "check": "npm test --silent"
+  },
+  {
+    "id": "small-feature",
+    "prompt": "Add a --version flag to the CLI that prints the version from package.json.",
+    "check": "node bin/cli.js --version"
+  },
+  {
+    "id": "review-last-commit",
+    "prompt": "Review the last commit for bugs and risks. Report only; change nothing."
+  }
+]

@@ -1,0 +1,66 @@
+<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Summary first, detail on demand">
+  <desc>Animated funnel: a large tool output is reduced to a short summary using quiet flags, failures only, or saving to a file and reading it with grep or tail; only the needed detail reaches the context.</desc>
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f87171"/><stop offset="55%" stop-color="#818cf8"/><stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+    <path id="f" d="M 40,200 L 1160,200"/>
+  </defs>
+  <rect width="1200" height="400" fill="#0b0e14"/>
+  <rect width="1200" height="400" fill="url(#grid)"/>
+
+  <text x="600" y="44" text-anchor="middle" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="800" fill="#F7F6FC">Summary first, detail on demand</text>
+
+  <!-- funnel -->
+  <path d="M 300,80 L 700,170 L 700,230 L 300,320 Z" fill="url(#brand)" opacity="0.13"/>
+  <path d="M 300,80 L 700,170 M 300,320 L 700,230" stroke="url(#brand)" stroke-width="1.5" fill="none"/>
+
+  <!-- raw output block -->
+  <g font-family="Consolas, monospace" font-size="11" fill="#f87171" opacity="0.85">
+    <rect x="40" y="80" width="230" height="240" rx="12" fill="#161b22" stroke="#f87171" stroke-opacity="0.35"/>
+    <text x="58" y="106">PASS test_user_create</text>
+    <text x="58" y="124">PASS test_user_delete</text>
+    <text x="58" y="142">PASS test_cart_total ...</text>
+    <text x="58" y="160">npm WARN deprecated ...</text>
+    <text x="58" y="178">  at Object.&lt;anonymous&gt;</text>
+    <text x="58" y="196">  at Module._compile</text>
+    <text x="58" y="214">PASS test_orders ...</text>
+    <text x="58" y="232">FAIL test_refund_rounding</text>
+    <text x="58" y="250">PASS ... × 812</text>
+    <text x="58" y="268">Downloading 241 packages</text>
+    <text x="58" y="296" fill="#a1a1aa">10,000 lines</text>
+  </g>
+
+  <!-- techniques -->
+  <g font-family="Consolas, monospace" font-size="11" fill="#a5b4fc">
+    <text x="370" y="165">-q · --silent · --stat</text>
+    <text x="370" y="205">failures only</text>
+    <text x="370" y="245">&gt; out.log  →  grep / tail</text>
+  </g>
+
+  <!-- summary block -->
+  <g font-family="Consolas, monospace" font-size="12">
+    <rect x="760" y="150" width="400" height="100" rx="12" fill="#161b22" stroke="#2dd4bf" stroke-width="1.5"/>
+    <text x="780" y="180" fill="#5eead4">812 passed, 1 failed</text>
+    <text x="780" y="202" fill="#F7F6FC">FAIL test_refund_rounding</text>
+    <text x="780" y="224" fill="#a1a1aa">expected 10.05, got 10.04 (refund.py:42)</text>
+  </g>
+
+  <!-- particles: many in, few out -->
+  <g fill="#f87171">
+    <circle r="2.5"><animateMotion dur="3s" repeatCount="indefinite" keyPoints="0.24;0.55" keyTimes="0;1" calcMode="linear"><mpath href="#f"/></animateMotion><animate attributeName="opacity" values="1;0" dur="3s" repeatCount="indefinite"/></circle>
+    <circle r="2.5" cy="-40"><animateMotion dur="3s" begin="-0.5s" repeatCount="indefinite" keyPoints="0.24;0.55" keyTimes="0;1" calcMode="linear"><mpath href="#f"/></animateMotion><animate attributeName="opacity" values="1;0" dur="3s" begin="-0.5s" repeatCount="indefinite"/></circle>
+    <circle r="2.5" cy="40"><animateMotion dur="3s" begin="-1s" repeatCount="indefinite" keyPoints="0.24;0.55" keyTimes="0;1" calcMode="linear"><mpath href="#f"/></animateMotion><animate attributeName="opacity" values="1;0" dur="3s" begin="-1s" repeatCount="indefinite"/></circle>
+    <circle r="2.5" cy="-80"><animateMotion dur="3s" begin="-1.5s" repeatCount="indefinite" keyPoints="0.24;0.55" keyTimes="0;1" calcMode="linear"><mpath href="#f"/></animateMotion><animate attributeName="opacity" values="1;0" dur="3s" begin="-1.5s" repeatCount="indefinite"/></circle>
+    <circle r="2.5" cy="80"><animateMotion dur="3s" begin="-2s" repeatCount="indefinite" keyPoints="0.24;0.55" keyTimes="0;1" calcMode="linear"><mpath href="#f"/></animateMotion><animate attributeName="opacity" values="1;0" dur="3s" begin="-2s" repeatCount="indefinite"/></circle>
+  </g>
+  <circle r="4.5" fill="#2dd4bf"><animateMotion dur="1.6s" repeatCount="indefinite" keyPoints="0.56;0.66" keyTimes="0;1" calcMode="linear"><mpath href="#f"/></animateMotion></circle>
+
+  <g font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" fill="#a1a1aa">
+    <text x="40" y="362">Truncated output is incomplete: read the saved file in pieces, never re-run the producer.</text>
+    <text x="40" y="382">Never repeat an identical command unless an input changed. Max 3 attempts per failure.</text>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+{
+  "name": "noah-core",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Token-efficient Claude Code skill and hooks.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "validate": "node scripts/validate.js"
+  },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,60 @@
+<svg viewBox="0 0 1200 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The smallest complete change ladder">
+  <desc>Animated ladder: a highlight walks down four steps (does it need to exist, already in the codebase, standard library or platform, minimum new code) and stops at the first that works. A guard rail lists what is never cut.</desc>
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2dd4bf"/><stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="430" fill="#0b0e14"/>
+  <rect width="1200" height="430" fill="url(#grid)"/>
+  <text x="60" y="52" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="800" fill="#F7F6FC">The smallest complete change</text>
+  <text x="60" y="76" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" fill="#a1a1aa">Take the first step that fully works. Lazy about the solution, never about completeness.</text>
+
+  <!-- moving highlight -->
+  <rect x="56" y="100" width="728" height="62" rx="14" fill="none" stroke="url(#brand)" stroke-width="2.5">
+    <animate attributeName="y" values="100;100;176;176;252;252;328;328" keyTimes="0;0.2;0.25;0.45;0.5;0.7;0.75;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+  <g font-family="Inter, 'Segoe UI', Arial, sans-serif">
+    <g transform="translate(60,104)">
+      <rect width="720" height="54" rx="12" fill="#161b22"/>
+      <text x="20" y="34" font-size="20" font-weight="800" fill="#2dd4bf">1</text>
+      <text x="52" y="25" font-size="15" font-weight="700" fill="#F7F6FC">Does it need to exist?</text>
+      <text x="52" y="43" font-family="Consolas, monospace" font-size="11" fill="#a1a1aa">skip unrequested features, options, "for later" code: name them in one line</text>
+    </g>
+    <g transform="translate(60,180)">
+      <rect width="720" height="54" rx="12" fill="#161b22"/>
+      <text x="20" y="34" font-size="20" font-weight="800" fill="#5eead4">2</text>
+      <text x="52" y="25" font-size="15" font-weight="700" fill="#F7F6FC">Already in this codebase?</text>
+      <text x="52" y="43" font-family="Consolas, monospace" font-size="11" fill="#a1a1aa">check the codebase map, reuse the helper the way the surrounding code does</text>
+    </g>
+    <g transform="translate(60,256)">
+      <rect width="720" height="54" rx="12" fill="#161b22"/>
+      <text x="20" y="34" font-size="20" font-weight="800" fill="#a5b4fc">3</text>
+      <text x="52" y="25" font-size="15" font-weight="700" fill="#F7F6FC">Standard library or platform?</text>
+      <text x="52" y="43" font-family="Consolas, monospace" font-size="11" fill="#a1a1aa">never add a dependency for a few lines</text>
+    </g>
+    <g transform="translate(60,332)">
+      <rect width="720" height="54" rx="12" fill="#161b22"/>
+      <text x="20" y="34" font-size="20" font-weight="800" fill="#818cf8">4</text>
+      <text x="52" y="25" font-size="15" font-weight="700" fill="#F7F6FC">Minimum new code</text>
+      <text x="52" y="43" font-family="Consolas, monospace" font-size="11" fill="#a1a1aa">existing style and structure · update every caller, test and fixture it touches</text>
+    </g>
+
+    <!-- never cut -->
+    <rect x="830" y="104" width="310" height="282" rx="14" fill="#161b22" stroke="#f59e0b" stroke-opacity="0.55" stroke-width="1.5"/>
+    <text x="852" y="138" font-size="15" font-weight="800" fill="#fbbf24">Never cut</text>
+    <circle cx="1112" cy="132" r="5" fill="#fbbf24"><animate attributeName="opacity" values="1;0.25;1" dur="1.8s" repeatCount="indefinite"/></circle>
+    <g font-size="13" fill="#F7F6FC">
+      <text x="852" y="176">✓ validation at trust boundaries</text>
+      <text x="852" y="210">✓ error handling vs data loss</text>
+      <text x="852" y="244">✓ security</text>
+      <text x="852" y="278">✓ accessibility</text>
+      <text x="852" y="312">✓ anything the user asked for</text>
+    </g>
+    <text x="852" y="360" font-family="Consolas, monospace" font-size="11" fill="#a1a1aa">shortcut: &lt;limit&gt;, &lt;when to upgrade&gt;</text>
+  </g>
+</svg>

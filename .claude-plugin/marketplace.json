@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "noah-core",
+  "description": "Get the most out of Claude Code without wasting tokens.",
+  "owner": {
+    "name": "Smith-Develop",
+    "url": "https://github.com/Smith-Develop"
+  },
+  "plugins": [
+    {
+      "name": "noah-core",
+      "description": "Lean context, summary-first output, smallest complete change, short honest replies.",
+      "source": "./",
+      "version": "1.0.0",
+      "license": "MIT",
+      "category": "productivity"
+    }
+  ]
+}
