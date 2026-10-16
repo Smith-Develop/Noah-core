@@ -81,3 +81,11 @@ test('graph adapter flags a graph older than the last commit', () => {
   git('-c', 'user.email=t@t', '-c', 'user.name=t', 'commit', '-q', '--allow-empty', '-m', 'x');
   assert.strictEqual(graphStatus(dir, true).status, 'stale');
 });
+
+test('Spanish diagrams are generated and up to date', () => {
+  const { build } = require('../scripts/i18n-diagrams');
+  const out = build();
+  for (const [f, svg] of Object.entries(out)) {
+    assert.strictEqual(fs.readFileSync(path.join(__dirname, '..', 'docs', 'diagrams', 'es', f), 'utf8'), svg, `${f}: run npm run diagrams`);
+  }
+});

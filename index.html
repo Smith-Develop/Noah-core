@@ -193,7 +193,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
         <a class="btn" href="#builder" data-i18n="hero.cta2"></a>
         <a class="btn" href="https://github.com/Smith-Develop/Noah-core">GitHub ↗</a>
       </div>
-      <img class="diagram" src="docs/diagrams/hero.svg" alt="Noah Core: noisy context in, lean context out" width="1200" height="440">
+      <img class="diagram" src="docs/diagrams/es/hero.svg" data-diagram="hero.svg" data-i18n-alt="alt.hero" alt="" width="1200" height="440">
     </div>
   </section>
 
@@ -207,7 +207,8 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
         <div class="card"><span class="dot" style="background:#a5b4fc"></span><h3 data-i18n="p3.t"></h3><p data-i18n="p3.d"></p></div>
         <div class="card"><span class="dot" style="background:#818cf8"></span><h3 data-i18n="p4.t"></h3><p data-i18n="p4.d"></p></div>
       </div>
-      <img class="diagram" src="docs/diagrams/summary-first.svg" alt="Summary first, detail on demand" loading="lazy" width="1200" height="400">
+      <img class="diagram" src="docs/diagrams/es/summary-first.svg" data-diagram="summary-first.svg" data-i18n-alt="alt.summary-first" alt="" loading="lazy" width="1200" height="400">
+      <img class="diagram" src="docs/diagrams/es/smallest-change.svg" data-diagram="smallest-change.svg" data-i18n-alt="alt.smallest-change" alt="" loading="lazy" width="1200" height="430">
     </div>
   </section>
 
@@ -265,7 +266,7 @@ cp -r Noah-core/skills/noah-* ~/.claude/skills/</pre></div>
     "NOAH_MAP_CHARS": "2000"
   }
 }</pre></div>
-      <img class="diagram" src="docs/diagrams/session-flow.svg" alt="How Noah Core loads" loading="lazy" width="1200" height="520">
+      <img class="diagram" src="docs/diagrams/es/session-flow.svg" data-diagram="session-flow.svg" data-i18n-alt="alt.session-flow" alt="" loading="lazy" width="1200" height="520">
     </div>
   </section>
 
@@ -358,7 +359,7 @@ cp -r Noah-core/skills/noah-* ~/.claude/skills/</pre></div>
     <div class="wrap">
       <h2 data-i18n="g.title"></h2>
       <p class="sub" data-i18n-html="g.sub"></p>
-      <img class="diagram" src="docs/diagrams/graphify-adapter.svg" alt="Graphify adapter decision" loading="lazy" width="1200" height="380">
+      <img class="diagram" src="docs/diagrams/es/graphify-adapter.svg" data-diagram="graphify-adapter.svg" data-i18n-alt="alt.graphify-adapter" alt="" loading="lazy" width="1200" height="380">
     </div>
   </section>
 
@@ -366,7 +367,7 @@ cp -r Noah-core/skills/noah-* ~/.claude/skills/</pre></div>
     <div class="wrap">
       <h2 data-i18n="faq.title"></h2>
       <div id="faqList" style="margin-top:20px"></div>
-      <img class="diagram" src="docs/diagrams/lineage.svg" alt="Where the ideas come from" loading="lazy" width="1200" height="360">
+      <img class="diagram" src="docs/diagrams/es/lineage.svg" data-diagram="lineage.svg" data-i18n-alt="alt.lineage" alt="" loading="lazy" width="1200" height="360">
     </div>
   </section>
 </main>
@@ -385,6 +386,12 @@ cp -r Noah-core/skills/noah-* ~/.claude/skills/</pre></div>
 
   var I18N = {
     es: {
+      'alt.hero': 'Noah Core: entra contexto ruidoso, sale contexto mínimo',
+      'alt.summary-first': 'Resumen primero, detalle bajo demanda: un log de 10.000 líneas se convierte en un resumen de tres',
+      'alt.smallest-change': 'La escalera del cambio mínimo completo y lo que nunca se recorta',
+      'alt.session-flow': 'Cómo se carga Noah Core: hooks SessionStart y SubagentStart',
+      'alt.graphify-adapter': 'Decisión del adaptador de Graphify',
+      'alt.lineage': 'Qué toma Noah Core de cada proyecto',
       'nav.what': 'Qué es', 'nav.install': 'Instalar', 'nav.use': 'Uso', 'nav.tips': 'Consejos', 'nav.builder': 'Constructor',
       'hero.title': 'Saca todo el provecho a <span class="grad">Claude Code</span><br>sin malgastar tokens',
       'hero.lead': 'Noah Core es un plugin que hace que Claude lea menos, repita menos y escriba solo lo necesario, sin recortar calidad, seguridad ni tests.',
@@ -437,6 +444,12 @@ cp -r Noah-core/skills/noah-* ~/.claude/skills/</pre></div>
       'footer.credits': 'Ideas de <a href="https://github.com/dietrichgebert/ponytail">Ponytail</a>, <a href="https://github.com/addyosmani/agent-skills">agent-skills</a>, <a href="https://github.com/morluto/rea">REA</a>, <a href="https://github.com/Graphify-Labs/graphify">Graphify</a>, <a href="https://github.com/diegosouzapw/OmniRoute">OmniRoute</a> y <a href="https://github.com/multica-ai/andrej-karpathy-skills">Karpathy</a>'
     },
     en: {
+      'alt.hero': 'Noah Core: noisy context in, lean context out',
+      'alt.summary-first': 'Summary first, detail on demand: a 10,000-line log becomes a three-line summary',
+      'alt.smallest-change': 'The smallest complete change ladder and what is never cut',
+      'alt.session-flow': 'How Noah Core loads: SessionStart and SubagentStart hooks',
+      'alt.graphify-adapter': 'Graphify adapter decision',
+      'alt.lineage': 'What Noah Core takes from each project',
       'nav.what': 'What', 'nav.install': 'Install', 'nav.use': 'Usage', 'nav.tips': 'Tips', 'nav.builder': 'Builder',
       'hero.title': 'Get the most out of <span class="grad">Claude Code</span><br>without wasting tokens',
       'hero.lead': 'Noah Core is a plugin that makes Claude read less, repeat less and write only what is needed, without cutting quality, security or tests.',
@@ -620,6 +633,11 @@ cp -r Noah-core/skills/noah-* ~/.claude/skills/</pre></div>
     root.lang = lang;
     document.querySelectorAll('[data-i18n]').forEach(function (el) { el.textContent = d[el.getAttribute('data-i18n')] || ''; });
     document.querySelectorAll('[data-i18n-html]').forEach(function (el) { el.innerHTML = d[el.getAttribute('data-i18n-html')] || ''; });
+    document.querySelectorAll('[data-i18n-alt]').forEach(function (el) { el.alt = d[el.getAttribute('data-i18n-alt')] || ''; });
+    // Diagrams have one SVG per language: docs/diagrams/ (English) and docs/diagrams/es/.
+    document.querySelectorAll('[data-diagram]').forEach(function (el) {
+      el.src = 'docs/diagrams/' + (lang === 'es' ? 'es/' : '') + el.getAttribute('data-diagram');
+    });
     document.querySelectorAll('[data-i18n-ph]').forEach(function (el) { el.placeholder = d[el.getAttribute('data-i18n-ph')] || ''; });
     document.querySelectorAll('[data-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang)); });
 

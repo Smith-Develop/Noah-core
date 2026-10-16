@@ -1,0 +1,50 @@
+<svg xml:lang="es" viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Qué toma Noah Core de cada proyecto">
+  <desc>Origen animado: seis proyectos (pautas de Karpathy, Ponytail, OmniRoute, Graphify, agent-skills y REA) aportan cada uno una idea que fluye hacia Noah Core.</desc>
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2dd4bf"/><stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+    <path id="s1" d="M 120,130 C 120,220 600,200 600,270"/>
+    <path id="s2" d="M 312,130 C 312,220 600,200 600,270"/>
+    <path id="s3" d="M 504,130 C 504,220 600,200 600,270"/>
+    <path id="s4" d="M 696,130 C 696,220 600,200 600,270"/>
+    <path id="s5" d="M 888,130 C 888,220 600,200 600,270"/>
+    <path id="s6" d="M 1080,130 C 1080,220 600,200 600,270"/>
+  </defs>
+  <rect width="1200" height="360" fill="#0b0e14"/>
+  <rect width="1200" height="360" fill="url(#grid)"/>
+  <g fill="none" stroke="url(#brand)" stroke-width="1.2" stroke-dasharray="3 5" opacity="0.45">
+    <use href="#s1"/><use href="#s2"/><use href="#s3"/><use href="#s4"/><use href="#s5"/><use href="#s6"/>
+  </g>
+  <g font-family="Inter, 'Segoe UI', Arial, sans-serif" text-anchor="middle">
+    <g font-size="14" font-weight="700" fill="#F7F6FC">
+      <rect x="35" y="40" width="170" height="90" rx="14" fill="#161b22" stroke="#ffffff" stroke-opacity="0.08"/><text x="120" y="72">Karpathy</text>
+      <rect x="227" y="40" width="170" height="90" rx="14" fill="#161b22" stroke="#ffffff" stroke-opacity="0.08"/><text x="312" y="72">Ponytail</text>
+      <rect x="419" y="40" width="170" height="90" rx="14" fill="#161b22" stroke="#ffffff" stroke-opacity="0.08"/><text x="504" y="72">OmniRoute</text>
+      <rect x="611" y="40" width="170" height="90" rx="14" fill="#161b22" stroke="#ffffff" stroke-opacity="0.08"/><text x="696" y="72">Graphify</text>
+      <rect x="803" y="40" width="170" height="90" rx="14" fill="#161b22" stroke="#ffffff" stroke-opacity="0.08"/><text x="888" y="72">agent-skills</text>
+      <rect x="995" y="40" width="170" height="90" rx="14" fill="#161b22" stroke="#ffffff" stroke-opacity="0.08"/><text x="1080" y="72">REA</text>
+    </g>
+    <g font-family="Consolas, monospace" font-size="11" fill="#a1a1aa">
+      <text x="120" y="96">cambios quirúrgicos</text><text x="120" y="112">suposiciones explícitas</text>
+      <text x="312" y="96">escalera cambio mínimo</text><text x="312" y="112">hooks · mapa del código</text>
+      <text x="504" y="96">filtrar salidas</text><text x="504" y="112">prosa breve, caché ok</text>
+      <text x="696" y="96">consulta, no grep</text><text x="696" y="112">EXTRACTED vs INFERRED</text>
+      <text x="888" y="96">pasos · revisión</text><text x="888" y="112">traspaso · evals</text>
+      <text x="1080" y="96">resumen primero</text><text x="1080" y="112">sin repetir comandos</text>
+    </g>
+    <rect x="490" y="270" width="220" height="64" rx="16" fill="#161b22" stroke="url(#brand)" stroke-width="2"/>
+    <text x="600" y="310" font-size="20" font-weight="800" fill="url(#brand)">noah-core</text>
+  </g>
+  <g fill="#5eead4">
+    <circle r="3"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#s1"/></animateMotion></circle>
+    <circle r="3" fill="#a5b4fc"><animateMotion dur="2.4s" begin="-0.4s" repeatCount="indefinite"><mpath href="#s2"/></animateMotion></circle>
+    <circle r="3"><animateMotion dur="2.4s" begin="-0.8s" repeatCount="indefinite"><mpath href="#s3"/></animateMotion></circle>
+    <circle r="3" fill="#a5b4fc"><animateMotion dur="2.4s" begin="-1.2s" repeatCount="indefinite"><mpath href="#s4"/></animateMotion></circle>
+    <circle r="3"><animateMotion dur="2.4s" begin="-1.6s" repeatCount="indefinite"><mpath href="#s5"/></animateMotion></circle>
+    <circle r="3" fill="#a5b4fc"><animateMotion dur="2.4s" begin="-2s" repeatCount="indefinite"><mpath href="#s6"/></animateMotion></circle>
+  </g>
+</svg>

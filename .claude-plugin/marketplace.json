@@ -11,9 +11,10 @@
       "name": "noah-core",
       "description": "Lean context, summary-first output, smallest complete change, short honest replies.",
       "source": "./",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "license": "MIT",
-      "category": "productivity"
+      "category": "productivity",
+      "homepage": "https://smith-develop.github.io/Noah-core/"
     }
   ]
 }

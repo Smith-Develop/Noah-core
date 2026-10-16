@@ -2,7 +2,9 @@
 
 <img src="./docs/diagrams/hero.svg" width="100%" alt="Noah Core: get the most out of Claude Code without wasting tokens">
 
-**English** · [Español](./README.es.md) · [Website & prompt builder](https://smith-develop.github.io/Noah-core/)
+**English** · [Español](./README.es.md)
+
+### 🌐 [Website, guide & prompt builder → smith-develop.github.io/Noah-core](https://smith-develop.github.io/Noah-core/)
 
 </div>
 
@@ -19,6 +21,8 @@ Noah Core is a Claude Code plugin that makes every session cheaper **without mak
 
 ## Install
 
+> Step-by-step guide in English and Spanish, plus an interactive prompt builder: **[https://smith-develop.github.io/Noah-core/](https://smith-develop.github.io/Noah-core/)**
+
 **Claude Code plugin (recommended: includes the hooks)**
 
 ```
@@ -27,6 +31,8 @@ Noah Core is a Claude Code plugin that makes every session cheaper **without mak
 ```
 
 Restart Claude Code. The rules load automatically in every session.
+
+Or in one command (Claude Code v2.1.275+): `/plugin install noah-core --marketplace Smith-Develop/Noah-core`
 
 **Skill only (no hooks)**: copy `skills/noah-core` (and the other `skills/noah-*` folders you want) into `~/.claude/skills/`. The core then loads when Claude decides it is relevant, or when you type `/noah-core`.
 
@@ -94,6 +100,17 @@ Noah is an original implementation. It borrows ideas, not code, from these proje
 | [agent-skills](https://github.com/addyosmani/agent-skills) | Plan in verifiable slices, review, handoff, skill evals | MIT |
 | [REA](https://github.com/morluto/rea) | Summary first, no identical re-runs, truncated ≠ complete, observed vs inferred vs unknown | MIT |
 
+## What Noah runs on your machine
+
+Noah sends nothing anywhere: no network calls, no telemetry, no dependencies to install.
+
+| Hook | When | What it does |
+|---|---|---|
+| `hooks/noah-session.js` | Session start, resume, `/clear`, `/compact` | Reads `skills/noah-core/SKILL.md`. Lists files with `git ls-files` (or walks the folder outside git), reads source files of up to 200 KB with regexes to build the map, and reads `git log -1` plus the timestamp of `graphify-out/graph.json` if it exists. Prints the result as session context. |
+| `hooks/noah-subagent.js` | Each subagent start | Reads `SKILL.md` and prints the context and output rules. |
+
+Both hooks are plain Node.js scripts in this repo (readable, no build step). They write no files. `/noah-context save` writes `.noah/handoff.md` in your project, and only when you ask for it.
+
 ## Measuring it
 
 Noah publishes **no savings figures yet**. They will come from A/B runs on your own tasks, not from estimates. See [`evals/`](./evals/README.md) to compare the same tasks with and without Noah (tokens, cost, turns, pass/fail).
@@ -103,6 +120,7 @@ Noah publishes **no savings figures yet**. They will come from A/B runs on your 
 ```bash
 npm test           # hook and map tests (node:test, no dependencies)
 npm run validate   # frontmatter + token budgets (core ≤ 6,500 chars)
+npm run diagrams   # regenerate docs/diagrams/es/ after editing an English SVG
 claude --plugin-dir .   # try the plugin locally
 ```
 

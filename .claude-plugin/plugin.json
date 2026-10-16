@@ -1,6 +1,7 @@
 {
   "name": "noah-core",
-  "version": "1.0.0",
+  "displayName": "Noah Core",
+  "version": "1.1.0",
   "description": "Token-efficient Claude Code: lean context, summary-first tool output, the smallest complete change, short honest replies. Optional Graphify adapter.",
   "author": {
     "name": "Smith-Develop",
@@ -9,5 +10,12 @@
   "homepage": "https://smith-develop.github.io/Noah-core/",
   "repository": "https://github.com/Smith-Develop/Noah-core",
   "license": "MIT",
-  "keywords": ["tokens", "efficiency", "context", "yagni", "claude-code", "skills"]
+  "keywords": [
+    "tokens",
+    "efficiency",
+    "context",
+    "yagni",
+    "claude-code",
+    "skills"
+  ]
 }
