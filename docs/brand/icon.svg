@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Source for .claude-plugin/icon.png (the directory needs a PNG): render at 1024x1024. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0b0e14"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="52%">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.30"/>
+      <stop offset="55%" stop-color="#6366f1" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" fill="url(#grid)"/>
+  <rect width="1024" height="1024" fill="url(#glow)"/>
+  <rect x="176" y="176" width="672" height="672" rx="150" fill="#161b22" stroke="url(#brand)" stroke-width="18"/>
+  <path d="M 340 690 L 340 334 L 684 690 L 684 334" fill="none" stroke="url(#brand)" stroke-width="84" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
